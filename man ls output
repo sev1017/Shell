@@ -1,0 +1,126 @@
+Last login: Sat Jul 15 19:36:26 on ttys000
+sinh@s-MacBook-Pro ~ % $ls
+sinh@s-MacBook-Pro ~ % $ ls
+zsh: command not found: $
+sinh@s-MacBook-Pro ~ % $pwd
+sinh@s-MacBook-Pro ~ % test
+sinh@s-MacBook-Pro ~ % cd
+sinh@s-MacBook-Pro ~ % $cd
+sinh@s-MacBook-Pro ~ % chsh -s /bin/zsh
+Changing shell for sinh.
+Password for sinh: 
+chsh: Credentials could not be verified, user name or password is invalid.  Credentials could not be verified, user name or password is invalid.
+sinh@s-MacBook-Pro ~ % 1125
+zsh: command not found: 1125
+sinh@s-MacBook-Pro ~ % chsh -s /bin/zsh
+Changing shell for sinh.
+Password for sinh: 
+chsh: Credentials could not be verified, user name or password is invalid.  Credentials could not be verified, user name or password is invalid.
+sinh@s-MacBook-Pro ~ % ls
+Applications	Downloads	Music		VSCode
+Desktop		Library		Pictures	thinkorswim
+Documents	Movies		Public
+sinh@s-MacBook-Pro ~ % ls - F
+ls: -: No such file or directory
+ls: F: No such file or directory
+sinh@s-MacBook-Pro ~ % ls-F
+zsh: command not found: ls-F
+sinh@s-MacBook-Pro ~ % ls
+Applications	Downloads	Music		VSCode
+Desktop		Library		Pictures	thinkorswim
+Documents	Movies		Public
+sinh@s-MacBook-Pro ~ % ls --F
+ls: unrecognized option `--F'
+usage: ls [-@ABCFGHILOPRSTUWabcdefghiklmnopqrstuvwxy1%,] [--color=when] [-D format] [file ...]
+sinh@s-MacBook-Pro ~ % ls -F
+Applications/	Downloads/	Music/		VSCode/
+Desktop/	Library/	Pictures/	thinkorswim/
+Documents/	Movies/		Public/
+sinh@s-MacBook-Pro ~ % clear
+
+sinh@s-MacBook-Pro ~ % ls --helpp
+ls: unrecognized option `--helpp'
+usage: ls [-@ABCFGHILOPRSTUWabcdefghiklmnopqrstuvwxy1%,] [--color=when] [-D format] [file ...]
+sinh@s-MacBook-Pro ~ % ls --help
+ls: unrecognized option `--help'
+usage: ls [-@ABCFGHILOPRSTUWabcdefghiklmnopqrstuvwxy1%,] [--color=when] [-D format] [file ...]
+sinh@s-MacBook-Pro ~ % help
+zsh: command not found: help
+sinh@s-MacBook-Pro ~ % ls help
+ls: help: No such file or directory
+sinh@s-MacBook-Pro ~ % man ls
+
+
+
+
+
+
+
+
+
+
+
+
+     -s      Display the number of blocks used in the file system by each
+             file.  Block sizes and directory totals are handled as described
+             in The Long Format subsection below, except (if the long format
+             is not also requested) the directory totals are not output when
+             the output is in a single column, even if multi-column output is
+             requested.  (-l) format, display complete time information for
+             the file, including month, day, hour, minute, second, and year.
+             The -D option gives even more control over the output format.
+             This option is not defined in IEEE Std 1003.1-2008 (“POSIX.1”).
+
+     -t      Sort by descending time modified (most recently modified first).
+             If two files have the same modification timestamp, sort their
+             names in ascending lexicographical order.  The -r option reverses
+             both of these sort orders.
+
+             Note that these sort orders are contradictory: the time sequence
+             is in descending order, the lexicographical sort is in ascending
+             order.  This behavior is mandated by IEEE Std 1003.2 (“POSIX.2”).
+             This feature can cause problems listing files stored with
+             sequential names on FAT file systems, such as from digital
+             cameras, where it is possible to have more than one image with
+             the same timestamp.  In such a case, the photos cannot be listed
+             in the sequence in which they were taken.  To ensure the same
+             sort order for time and for lexicographical sorting, set the
+             environment variable LS_SAMESORT or use the -y option.  This
+             causes ls to reverse the lexicographical sort order when sorting
+             files with the same modification timestamp.
+
+     -u      Use time of last access, instead of time of last modification of
+             the file for sorting (-t) or long printing (-l).
+
+     -v      Force unedited printing of non-graphic characters; this is the
+             default when output is not to a terminal.
+
+     -w      Force raw printing of non-printable characters.  This is the
+             default when output is not to a terminal.  This option is not
+             defined in IEEE Std 1003.1-2001 (“POSIX.1”).
+
+     -x      The same as -C, except that the multi-column output is produced
+             with entries sorted across, rather than down, the columns.
+
+     -y      When the -t option is set, sort the alphabetical output in the
+             same order as the time output.  This has the same effect as
+             setting LS_SAMESORT.  See the description of the -t option for
+             more details.  This option is not defined in IEEE Std 1003.1-2001
+             (“POSIX.1”).
+
+     -%      Distinguish dataless files and directories with a '%' character
+             in long
+
+     -1      (The numeric digit “one”.) Force output to be one entry per line.
+             This is the default when output is not to a terminal.  (-l)
+             output, and don't materialize dataless directories when listing
+             them.
+
+     -,      (Comma) When the -l option is set, print file sizes grouped and
+             separated by thousands using the non-monetary separator returned
+             by localeconv(3), typically a comma or period.  If no locale is
+             set, or the locale does not have a non-monetary separator, this
+             option has no effect.  This option is not defined in IEEE Std
+             1003.1-2001 (“POSIX.1”).
+
+:
